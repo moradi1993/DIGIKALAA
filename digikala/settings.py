@@ -25,9 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vq5(p-9z3*xop%bj7%i#cjekq!^j23wmfg%i*chid*u2zg!y(o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = os.environ.git('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['digikalaa-1.onrender.com']
+ALLOWED_HOSTS = ['digikalaa-1.onrender.com', 'mycustomdomin.ir']
 
 #ALLOWED_HOSTS = ['https://digikalaa-1.onrender.com']
 
