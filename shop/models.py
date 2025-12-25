@@ -83,7 +83,8 @@ class Order(models.Model):   # Order = سفارشات
     quantity = models.IntegerField(default=1) #quantity = تعداد
     address = models.CharField(max_length=400,default='',blank=False)
     phone = models.CharField(max_length=20,blank=True)
-    date = models.DateField(default=datetime.datetime.today())
+    #date = models.DateField(default=datetime.datetime.today())
+    date = models.DateField(default=timezone.now)
     status = models.BooleanField(default=False)
 
     class Meta:
